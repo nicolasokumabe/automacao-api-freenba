@@ -1,0 +1,17 @@
+---
+- title: busca de times sem a chave
+  id_no_key: "?page=0&per_page=25"
+  code: 401
+  error: Invalid API key. Go to https://docs.rapidapi.com/docs/keys for more info.
+- title: id de time existente sem a chave
+  id_no_key: "/1"
+  code: 401
+  error: Invalid API key. Go to https://docs.rapidapi.com/docs/keys for more info.
+- title: id de time inexistente sem a chave
+  id_no_key: "/0"
+  code: 401
+  error: Invalid API key. Go to https://docs.rapidapi.com/docs/keys for more info.
+- title: sem o id de time sem a chave
+  id_no_key: "/"
+  code: 401
+  error: Invalid API key. Go to https://docs.rapidapi.com/docs/keys for more info.

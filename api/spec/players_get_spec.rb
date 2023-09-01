@@ -1,32 +1,35 @@
 require_relative "routes/players"
+require_relative "helpers"
 
 describe "Get Players" do
-  examples_ok_key = [
-    {
-      title: "busca de jogadores com a chave",
-      id_ok_key: "?page=0&per_page=25",
-      code: 200,
-      error: "",
-    },
-    {
-      title: "id de jogador existente com a chave",
-      id_ok_key: "/1",
-      code: 200,
-      error: "",
-    },
-    {
-      title: "id de jogador inexistente com a chave",
-      id_ok_key: "/0",
-      code: 404,
-      error: "",
-    },
-    {
-      title: "sem o id de jogador com a chave",
-      id_ok_key: "/",
-      code: 200,
-      error: "",
-    },
-  ]
+  # examples_ok_key = [
+  #   {
+  #     title: "busca de jogadores com a chave",
+  #     id_ok_key: "?page=0&per_page=25",
+  #     code: 200,
+  #     error: "",
+  #   },
+  #   {
+  #     title: "id de jogador existente com a chave",
+  #     id_ok_key: "/1",
+  #     code: 200,
+  #     error: "",
+  #   },
+  #   {
+  #     title: "id de jogador inexistente com a chave",
+  #     id_ok_key: "/0",
+  #     code: 404,
+  #     error: "",
+  #   },
+  #   {
+  #     title: "sem o id de jogador com a chave",
+  #     id_ok_key: "/",
+  #     code: 200,
+  #     error: "",
+  #   },
+  # ]
+
+  examples_ok_key = Helpers::get_fixture("jogadores_ok_key")
 
   examples_ok_key.each do |e|
     context "#{e[:title]}" do
@@ -41,32 +44,34 @@ describe "Get Players" do
     end
   end
 
-  examples_no_key = [
-    {
-      title: "busca de jogadores sem a chave",
-      id_no_key: "?page=0&per_page=25",
-      code: 401,
-      error: "Invalid API key. Go to https://docs.rapidapi.com/docs/keys for more info.",
-    },
-    {
-      title: "id de jogador existente sem a chave",
-      id_no_key: "/1",
-      code: 401,
-      error: "Invalid API key. Go to https://docs.rapidapi.com/docs/keys for more info.",
-    },
-    {
-      title: "id de jogador inexistente sem a chave",
-      id_no_key: "/0",
-      code: 401,
-      error: "Invalid API key. Go to https://docs.rapidapi.com/docs/keys for more info.",
-    },
-    {
-      title: "sem o id de jogador sem a chave",
-      id_no_key: "/",
-      code: 401,
-      error: "Invalid API key. Go to https://docs.rapidapi.com/docs/keys for more info.",
-    },
-  ]
+  # examples_no_key = [
+  #   {
+  #     title: "busca de jogadores sem a chave",
+  #     id_no_key: "?page=0&per_page=25",
+  #     code: 401,
+  #     error: "Invalid API key. Go to https://docs.rapidapi.com/docs/keys for more info.",
+  #   },
+  #   {
+  #     title: "id de jogador existente sem a chave",
+  #     id_no_key: "/1",
+  #     code: 401,
+  #     error: "Invalid API key. Go to https://docs.rapidapi.com/docs/keys for more info.",
+  #   },
+  #   {
+  #     title: "id de jogador inexistente sem a chave",
+  #     id_no_key: "/0",
+  #     code: 401,
+  #     error: "Invalid API key. Go to https://docs.rapidapi.com/docs/keys for more info.",
+  #   },
+  #   {
+  #     title: "sem o id de jogador sem a chave",
+  #     id_no_key: "/",
+  #     code: 401,
+  #     error: "Invalid API key. Go to https://docs.rapidapi.com/docs/keys for more info.",
+  #   },
+  # ]
+
+  examples_no_key = Helpers::get_fixture("jogadores_no_key")
 
   examples_no_key.each do |e|
     context "#{e[:title]}" do
