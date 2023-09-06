@@ -1,4 +1,4 @@
-require_relative "routes/teams"
+require_relative "routes/chave"
 require_relative "helpers"
 
 describe "Get Teams" do
@@ -35,7 +35,7 @@ describe "Get Teams" do
     context "#{e[:title]}" do
       before(:all) do
         # sleep 1
-        @result = Teams.new.id_ok_key(e[:id_ok_key])
+        @result = Chave.new.id_ok_key("teams", e[:id_ok_key])
       end
 
       it "valida status code" do
@@ -77,7 +77,7 @@ describe "Get Teams" do
     context "#{e[:title]}" do
       before(:all) do
         sleep 2.8
-        @result = Teams.new.id_no_key(e[:id_no_key])
+        @result = Chave.new.id_no_key("teams", e[:id_no_key])
       end
 
       it "valida status code" do

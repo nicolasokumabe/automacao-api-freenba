@@ -1,10 +1,10 @@
-require_relative "routes/stats"
+require_relative "routes/chave"
 
 describe "Get All Stats" do
   context "obtendo status com a chave" do
     before(:all) do
       sleep 2.4
-      @result = Stats.new.id_ok_key
+      @result = Chave.new.id_ok_key("stats", "")
     end
 
     it "valida status code" do
@@ -15,7 +15,7 @@ describe "Get All Stats" do
   context "obtendo status sem a chave" do
     before(:all) do
       sleep 2.4
-      @result = Stats.new.id_no_key
+      @result = Chave.new.id_no_key("stats", "")
     end
 
     it "valida status code" do

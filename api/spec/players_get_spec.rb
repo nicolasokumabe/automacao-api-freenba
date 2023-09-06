@@ -1,4 +1,4 @@
-require_relative "routes/players"
+require_relative "routes/chave"
 require_relative "helpers"
 
 describe "Get Players" do
@@ -35,7 +35,7 @@ describe "Get Players" do
     context "#{e[:title]}" do
       before(:all) do
         # sleep 1
-        @result = Players.new.id_ok_key(e[:id_ok_key])
+        @result = Chave.new.id_ok_key("players", e[:id_ok_key])
       end
 
       it "valida status code" do
@@ -77,7 +77,7 @@ describe "Get Players" do
     context "#{e[:title]}" do
       before(:all) do
         sleep 2.8
-        @result = Players.new.id_no_key(e[:id_no_key])
+        @result = Chave.new.id_no_key("players", e[:id_no_key])
       end
 
       it "valida status code" do
