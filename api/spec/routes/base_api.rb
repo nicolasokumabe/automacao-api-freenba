@@ -1,4 +1,5 @@
 require "httparty"
+require "dotenv/load"
 
 class BaseApi
   include HTTParty

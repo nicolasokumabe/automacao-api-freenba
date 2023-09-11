@@ -3,6 +3,7 @@ GEM
   specs:
     bson (4.15.0)
     diff-lcs (1.5.0)
+    dotenv (2.8.1)
     httparty (0.18.1)
       mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
@@ -32,6 +33,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  dotenv
   httparty (= 0.18.1)
   mongo (= 2.13.1)
   rspec (= 3.10)
