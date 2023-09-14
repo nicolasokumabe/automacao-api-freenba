@@ -1,17 +1,17 @@
 ---
 - title: busca de times com a chave
-  id_ok_key: "?page=0&per_page=25"
+  consulta_chave: "?page=0&per_page=25"
   code: 200
   error: ''
 - title: id de time existente com a chave
-  id_ok_key: "1"
+  consulta_chave: "1"
   code: 200
   error: ''
 - title: id de time inexistente com a chave
-  id_ok_key: "0"
+  consulta_chave: "0"
   code: 404
   error: ''
 - title: sem o id de time com a chave
-  id_ok_key: ""
+  consulta_chave: ""
   code: 200
   error: ''

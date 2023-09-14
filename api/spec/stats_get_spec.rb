@@ -2,7 +2,7 @@ describe "Get All Stats" do
   context "obtendo status com a chave" do
     before(:all) do
       sleep 2.4
-      @result = Chave.new.id_ok_key("stats", "")
+      @result = BaseApi.new.consulta_chave("stats")
     end
 
     it "valida status code" do
@@ -13,7 +13,7 @@ describe "Get All Stats" do
   context "obtendo status sem a chave" do
     before(:all) do
       sleep 2.4
-      @result = Chave.new.id_no_key("stats", "")
+      @result = BaseApi.new.consulta_sem_chave("stats")
     end
 
     it "valida status code" do

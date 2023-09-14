@@ -4,7 +4,7 @@ describe "Get Games" do
   examples_ok_key.each do |e|
     context "#{e[:title]}" do
       before(:all) do
-        @result = Chave.new.id_ok_key("games", e[:id_ok_key])
+        @result = BaseApi.new.consulta_chave("games", e[:consulta_chave])
       end
 
       it "valida status code" do
@@ -19,7 +19,7 @@ describe "Get Games" do
     context "#{e[:title]}" do
       before(:all) do
         sleep 2.8
-        @result = Chave.new.id_no_key("games", e[:id_no_key])
+        @result = BaseApi.new.consulta_sem_chave("games", e[:consulta_sem_chave])
       end
 
       it "valida status code" do

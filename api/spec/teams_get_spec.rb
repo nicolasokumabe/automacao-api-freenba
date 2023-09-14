@@ -5,7 +5,7 @@ describe "Get Teams" do
     context "#{e[:title]}" do
       before(:all) do
         # sleep 1
-        @result = Chave.new.id_ok_key("teams", e[:id_ok_key])
+        @result = BaseApi.new.consulta_chave("teams", e[:consulta_chave])
       end
 
       it "valida status code" do
@@ -20,7 +20,7 @@ describe "Get Teams" do
     context "#{e[:title]}" do
       before(:all) do
         sleep 2.8
-        @result = Chave.new.id_no_key("teams", e[:id_no_key])
+        @result = BaseApi.new.consulta_sem_chave("teams", e[:consulta_sem_chave])
       end
 
       it "valida status code" do
