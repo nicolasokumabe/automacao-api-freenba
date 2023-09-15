@@ -1,0 +1,21 @@
+current directory: /home/super/Documentos/GitHub/NBA/api/.gems/ruby/3.0.0/gems/bson-4.15.0/ext/bson
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20230911-22635-4pdp10.rb extconf.rb
+creating Makefile
+
+current directory: /home/super/Documentos/GitHub/NBA/api/.gems/ruby/3.0.0/gems/bson-4.15.0/ext/bson
+make DESTDIR\= clean
+
+current directory: /home/super/Documentos/GitHub/NBA/api/.gems/ruby/3.0.0/gems/bson-4.15.0/ext/bson
+make DESTDIR\=
+compiling bytebuf.c
+compiling endian.c
+compiling init.c
+compiling libbson-utf8.c
+compiling read.c
+compiling util.c
+compiling write.c
+linking shared-object bson_native.so
+
+current directory: /home/super/Documentos/GitHub/NBA/api/.gems/ruby/3.0.0/gems/bson-4.15.0/ext/bson
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 bson_native.so ./.gem.20230911-22635-xxrxth
