@@ -1,5 +1,3 @@
-require_relative "routes/chave"
-
 describe "Get All Stats" do
   context "obtendo status com a chave" do
     before(:all) do

@@ -4,14 +4,14 @@
   code: 401
   error: Invalid API key. Go to https://docs.rapidapi.com/docs/keys for more info.
 - title: id de jogador existente sem a chave
-  id_no_key: "/1"
+  id_no_key: "1"
   code: 401
   error: Invalid API key. Go to https://docs.rapidapi.com/docs/keys for more info.
 - title: id de jogador inexistente sem a chave
-  id_no_key: "/0"
+  id_no_key: "0"
   code: 401
   error: Invalid API key. Go to https://docs.rapidapi.com/docs/keys for more info.
 - title: sem o id de jogador sem a chave
-  id_no_key: "/"
+  id_no_key: ""
   code: 401
   error: Invalid API key. Go to https://docs.rapidapi.com/docs/keys for more info.

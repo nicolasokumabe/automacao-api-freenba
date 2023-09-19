@@ -1,3 +1,7 @@
+require_relative "routes/chave"
+require_relative "helpers"
+require "dotenv/load"
+
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true

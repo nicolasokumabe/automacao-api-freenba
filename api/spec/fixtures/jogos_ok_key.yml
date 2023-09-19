@@ -4,14 +4,14 @@
   code: 200
   error: ''
 - title: id de jogo existente com a chave
-  id_ok_key: "/1"
+  id_ok_key: "1"
   code: 200
   error: ''
 - title: id de jogo inexistente com a chave
-  id_ok_key: "/0"
+  id_ok_key: "0"
   code: 404
   error: ''
 - title: sem o id de jogo com a chave
-  id_ok_key: "/"
+  id_ok_key: ""
   code: 200
   error: ''
