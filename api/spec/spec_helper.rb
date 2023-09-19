@@ -1,6 +1,8 @@
-require_relative "routes/chave"
+require_relative "routes/base_api"
 require_relative "helpers"
 require "dotenv/load"
+require "httparty"
+require "yaml"
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
